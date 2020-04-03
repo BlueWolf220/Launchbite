@@ -1,13 +1,17 @@
 #imports
 import keyboard
+import time
 from tkinter import *
 from tkinter import ttk
 import time
 import Launchbite_settings as s
+time.sleep(2)
+
 #general setup
 window = Tk()
 style = ttk.Style()
 window.title('Launchdesk')
+time.sleep(2)
 
 #image setup
 
@@ -35,24 +39,6 @@ eagleButton = Button(window, text='Eagle', command = open_eagle)
 githubDeskButton = Button(window, text='Github Desktop', command = open_githubDesk)
 atomButton = Button(window, text='Atom', command = open_atom)
 muButton = Button(window, text='Mu', command = open_mu)
-
-#style settings
-if s.theme=='plain':
-    pass
-if s.theme = 'retro':
-    style.theme_use('classic')
-if s.theme=='big':
-    style.theme_use('clam')
-if s.theme=='classic':
-    style.theme_use('winnative')
-if s.theme=='other1':
-    style.theme_use('alt')
-if s.theme=='other2':
-    style.theme_use('vista')
-if s.theme=='other3':
-    style.theme_use('xpnative')
-if s.theme=='other4':
-    style.theme_use('default')
 
 #size settings
 if s.shape=='slim':
