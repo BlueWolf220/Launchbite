@@ -5,13 +5,11 @@ from tkinter import *
 from tkinter import ttk
 import time
 import Launchbite_settings as s
-time.sleep(2)
 
 #general setup
 window = Tk()
 style = ttk.Style()
 window.title('Launchdesk')
-time.sleep(2)
 
 #image setup
 
@@ -32,13 +30,29 @@ def open_mu():
     keyboard.press_and_release('windows+9')
 
 #button setup
-chromebutton = Button(window, text = 'chrome', command = open_chrome)
-gitkrakenButton = Button(window, text = 'GitKraken', command = open_gitkraken)
-fusionButton = Button(window, text='Fusion 360', command = open_fusion)
-eagleButton = Button(window, text='Eagle', command = open_eagle)
-githubDeskButton = Button(window, text='Github Desktop', command = open_githubDesk)
-atomButton = Button(window, text='Atom', command = open_atom)
-muButton = Button(window, text='Mu', command = open_mu)
+chromebutton = ttk.Button(window, text = 'chrome', command = open_chrome)
+gitkrakenButton = ttk.Button(window, text = 'GitKraken', command = open_gitkraken)
+fusionButton = ttk.Button(window, text='Fusion 360', command = open_fusion)
+eagleButton = ttk.Button(window, text='Eagle', command = open_eagle)
+githubDeskButton = ttk.Button(window, text='Github Desktop', command = open_githubDesk)
+atomButton = ttk.Button(window, text='Atom', command = open_atom)
+muButton = ttk.Button(window, text='Mu', command = open_mu)
+
+#style settings
+if s.appTheme=='plain':
+    style.theme_use('default')
+if s.appTheme=='retro':
+    style.theme_use('classic')
+if s.appTheme=='big':
+    style.theme_use('clam')
+if s.appTheme=='classic':
+    style.theme_use('winnative')
+if s.appTheme=='other1':
+    style.theme_use('alt')
+if s.appTheme=='other2':
+    style.theme_use('vista')
+if s.appTheme=='other3':
+    style.theme_use('xpnative')
 
 #size settings
 if s.shape=='slim':
