@@ -12,6 +12,7 @@ style = ttk.Style()
 window.title('Launchdesk')
 
 #image setup
+atom_logo = PhotoImage(file='atom_logo.gif')
 
 #function setup
 def open_chrome():
@@ -35,7 +36,7 @@ gitkrakenButton = ttk.Button(window, text = 'GitKraken', command = open_gitkrake
 fusionButton = ttk.Button(window, text='Fusion 360', command = open_fusion)
 eagleButton = ttk.Button(window, text='Eagle', command = open_eagle)
 githubDeskButton = ttk.Button(window, text='Github Desktop', command = open_githubDesk)
-atomButton = ttk.Button(window, text='Atom', command = open_atom)
+atomButton = ttk.Button(window, text='atom', command = open_atom)
 muButton = ttk.Button(window, text='Mu', command = open_mu)
 
 #style settings
